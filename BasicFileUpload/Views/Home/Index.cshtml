@@ -4,39 +4,6 @@
     ViewData["Title"] = "Home Page";
 }
 
-
-@*<!DOCTYPE html>
-<html>
-<head>
-  <title>File Upload with Progress Bar (using Dropzone.js)</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dropzone/dist/dropzone.css">
-</head>
-<body>
-  <h1>File Upload with Progress Bar (using Dropzone.js)</h1>
-
-  <form id="myDropzone" class="dropzone"></form>
-
-  <script src="https://cdn.jsdelivr.net/npm/dropzone"></script>
-  <script>
-    // Customize Dropzone options here (if needed)
-    Dropzone.options.myDropzone = {
-      paramName: "file", // Name of the file input field
-      url: "/upload", // URL where the file should be uploaded
-      maxFilesize: 5, // Maximum file size in megabytes
-      maxFiles: 1, // Maximum number of files allowed
-      acceptedFiles: ".jpg, .png, .gif", // Allowed file types
-      init: function() {
-        this.on("complete", function(file) {
-          if (file.status === "success") {
-            alert("File uploaded!");
-          }
-        });
-      }
-    };
-  </script>
-</body>
-</html>
-*@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -80,7 +47,6 @@
         var fileUpload = $("#file").get(0);
         var files = fileUpload.files;
         var data = new FormData();
-        const request = document.querySelector('.myForm');
 
         for (var i = 0; i < files.length; i++) {
             var fname = files[i].name;
